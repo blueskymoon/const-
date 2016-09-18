@@ -8,7 +8,7 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-void fun(int  &a,int  &b);
+void fun(const int  &a,const int  &b);
 int main(void)
 {
 	int x=10;
@@ -18,7 +18,7 @@ int main(void)
 	return 0;
 }
 
-void fun(int  &a ,int  &b)
+void fun(const int  &a ,const int  &b)
 {
 	a=22;
 	b=33;
