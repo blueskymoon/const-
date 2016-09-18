@@ -8,29 +8,14 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-void fun(const int &a,const int &b);
 
 int main(void)
 {
-	int x=3;
-	int y=5;
-//    int const &z =x;
-	fun(x,y);
-	cout<<x<<" "<<y<<endl;
-/*	z=10;
-	x=20;
-	cout<<z<<x<<endl;*/
-//	int *const p=&x; //固定 p,但是可以给x 赋值
-//    int const *p =&x;
-//	int const *p = &x;// const int *p = &x;
-/*	cout<<*p<<endl;
-	p=&y;
-    cout<<*p<<endl;*/
+	int x=10;
+	int y=20;
+	int const *p =&x;//可以对x进行赋值
+    x= 30;
+	p=&y; //可以对y进行赋值
+	cout<<y<<x<<endl;
 	return 0;
 }
-
-void fun(const int &a,const int &b)
-{
-	a=10;
-	b=20;
-}//如果没有const 函数中的操作会形参会影响实参
